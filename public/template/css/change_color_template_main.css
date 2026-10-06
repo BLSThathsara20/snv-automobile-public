@@ -1,0 +1,347 @@
+/*
+.tools {
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: -5px;
+    width: 50px;
+    margin-top: -88px;
+    padding: 5px 5px 7px 9px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: #fafafa;
+    background: -moz-linear-gradient(top, #fafafa 0%, #dddddd 100%);
+    background: -webkit-linear-gradient(top, #fafafa 0%, #dddddd 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #dddddd 100%);
+    border-radius: 5px;
+    text-align: center;
+}
+.tools span {
+    width: 33px;
+    display: block;
+    padding-left: 5px;
+    margin-bottom: 4px;
+}
+.tools a.color-yellow {
+    background-color: #fede00;
+}
+.tools a.color-green {
+    background-color: #80b444;
+}
+.tools a.color-blue {
+    background-color: #4290e0;
+}
+.tools a.color-violet {
+    background-color: #4b5db5;
+}
+.tools a.color-red {
+    background-color: #ec3542;
+}
+.tools a.color-orange {
+    background-color: #f58123;
+}
+.tools a.color-turquoise {
+    background-color: #5ec6ae;
+}
+.tools a {
+    display: inline-block;
+    margin-top: 7px;
+    width: 25px;
+    height: 25px;
+    background: green;
+    text-indent: -1000px;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+*/
+.demo-rtl {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: #fafafa;
+    background: -moz-linear-gradient(top, #fafafa 0%, #dddddd 100%);
+    background: -webkit-linear-gradient(top, #fafafa 0%, #dddddd 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #dddddd 100%);
+    z-index: 9999;
+    width: 40px;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: -35px;
+}
+a.rtldemo {
+    display: block;
+    text-indent: inherit;
+    font-size: 12px;
+    font-weight: 700;
+	color: #fff;
+	padding: 10px;
+}
+
+a.rtldemo:hover,a.rtldemo:focus{
+    color:#fff;
+}
+.demo-ltr {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: #fafafa;
+    background: -moz-linear-gradient(top, #fafafa 0%, #dddddd 100%);
+    background: -webkit-linear-gradient(top, #fafafa 0%, #dddddd 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #dddddd 100%);
+    z-index: 9999;
+    width: 40px;
+    border-radius: 5px 0px 0px 5px;
+    margin-top: -30px;
+    left: auto;
+}
+a.ltrdemo {
+    display: block;
+    text-indent: inherit;
+    font-size: 12px;
+    font-weight: 700;
+	color: #fff !important;
+	padding: 10px;
+}
+
+body.rtl .demo-rtl {
+    display: none;
+}
+body .demo-rtl {
+    display: block;
+    background: #4d4d4d;
+}
+body .demo-ltr{
+    display: none;
+}
+body.rtl .demo-ltr {
+	display: block;
+    background: #4d4d4d;
+}
+@media (max-width: 767px){
+	body .demo-rtl,.tools {
+		display: none;
+	}
+	body .demo-ltr{
+		display: none;
+	}
+}
+
+
+.colorswatch-btn {
+	border-radius: 0 !important;
+	overflow: hidden;
+	background-color: #4d4d4d;
+}
+.layoutswatch .title,
+.colorswatch .title {
+	font-size: 15px;
+	line-height: 1em;
+	font-weight: 600;
+	text-align: left;
+	color:  #fff;
+}
+.colorswatch .title {
+	position: absolute;
+	top: 10px;
+	text-transform: uppercase;
+}
+.layoutswatch .title {
+	position: absolute;
+	top: 18px;
+	text-transform: uppercase;
+}
+.colorswatch-btn {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 0 5px 5px 0 !important;
+	padding: 0;
+	transition: .3s;
+	cursor: pointer;
+}
+.colorswatch-btn svg,
+.buy-now .btn-primary svg {
+	width: 26px;
+	height: 27px;
+	position: relative;
+	top: 7px;
+	left: 0px;
+	fill: #fff;
+}
+.colorswatch, .layoutswatch {
+	position: fixed;
+	z-index: 99999;
+	top: calc(50% - 124px);
+	left: 0;
+	display: block;
+	text-align: center;
+	width: 40px;
+    height: 40px;
+}
+.layoutswatch {
+	top: calc(50% - 80px);
+}
+.colorswatch-inside {
+	position: absolute;
+	left: -140px;
+	width: 140px;
+	background-color: #686868;
+	padding: 35px 18px 8px;
+	transition: .3s;
+}
+.layoutswatch .colorswatch-inside {
+	position: absolute;
+	left: -270px;
+	width: 270px;
+	background-color: #686868;
+	padding: 41px 15px 8px;
+	transition: .3s;
+}
+.colorswatch.opened .colorswatch-inside,
+.layoutswatch.opened .colorswatch-inside{
+	left: 0;
+}
+.colorswatch.opened .colorswatch-btn {
+	left: 140px;
+}
+.layoutswatch.opened .colorswatch-btn {
+	left: 270px;
+}
+.colorswatch .colorswatch-inside a {
+	position: relative;
+	width: 34px;
+	height: 33px;
+	display: block;
+	float: left;
+	transition: .2s;
+	text-decoration: none !important;
+    line-height: 24px;
+}
+.layoutswatch .colorswatch-inside a {
+	width: 100%;
+	height: auto;
+	margin: 5px 0;
+}
+.colorswatch-inside a.active {
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	z-index: 1;
+}
+.colorswatch-inside a.active:after {
+	content: '\e91d';
+	font-family: 'auto';
+	font-size: 14px;
+	color: #fff;
+	position: relative;
+	top: 2px;
+	left: 1px;
+}
+.layoutswatch .colorswatch-inside a.active:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index 1;
+	font-size: 35px;
+	background-color: rgba(0,0,0,.4);
+}
+.colorswatch-inside a:hover {
+	opacity: .7;
+}
+.colorswatch-inside a.color-yellow {
+	background-color: #fede00;
+}
+.colorswatch-inside a.color-blue {
+	background-color: #4290e0;
+}
+.colorswatch-inside a.color-green {
+	background-color: #80b444;
+}
+.colorswatch-inside a.color-violet {
+	background-color: #4b5db5;
+}
+.colorswatch-inside a.color-turquoise {
+	background-color: #2f63b6;
+}
+.colorswatch-inside a.color-darkorange {
+	background-color: #f47629;
+}
+.colorswatch-inside a.color-orange {
+	background-color: #f58123;
+}
+.colorswatch-inside a.color-red {
+	background-color: #ec3542;
+}
+
+@media (max-width: 767px) {
+	.colorswatch {
+		display: none;
+	}
+}
+
+
+
+.layout-1 .colorswatch-inside a.color-turquoise, .layout-2 .colorswatch-inside a.color-turquoise {
+    display: none;
+}
+.layout-2.layout-3 .colorswatch-inside a.color-turquoise {
+    display: block;
+}
+
+.layout-2.layout-3 .colorswatch-inside a.color-yellow {
+    display: none;
+}
+
+
+.layout-1 .colorswatch-inside a.skin-2:after,.layout-1 .colorswatch-inside a.skin-3:after {
+    display: none;
+}
+.layout-2 .colorswatch-inside a.skin-1:after,.layout-2 .colorswatch-inside a.skin-3:after {
+    display: none;
+}
+
+.layout-2.layout-3 .colorswatch-inside a.skin-1:after,.layout-2.layout-3 .colorswatch-inside a.skin-2:after {
+    display: none;
+}
+.layout-2.layout-3 .colorswatch-inside a.skin-3:after {
+    display: flex;
+}
+
+body.rtl .colorswatch, body.rtl .layoutswatch {
+    left: unset;
+    right: 0;
+}
+body.rtl .colorswatch-inside {
+    left: unset;
+    right: -140px;
+}
+body.rtl .colorswatch.opened .colorswatch-inside, body.rtl .layoutswatch.opened .colorswatch-inside {
+    right: 0;
+}
+body.rtl .colorswatch-btn { 
+	left:unset;
+}
+body.rtl .colorswatch.opened .colorswatch-btn {
+    right: 140px;
+}
+body.rtl .layoutswatch .colorswatch-inside {
+	right: -270px;
+}
+body.rtl .layoutswatch.opened .colorswatch-btn {
+    right: 270px;
+}
+body.rtl .colorswatch-btn {
+	border-radius: 5px 0 0 5px !important;
+}
+body.rtl .colorswatch.opened .colorswatch-btn {
+    left: unset;	
+}
+body.rtl .layoutswatch.opened .colorswatch-btn {
+    left: unset;
+}
