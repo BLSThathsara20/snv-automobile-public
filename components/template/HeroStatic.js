@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { img } from '../../lib/templateAssets';
 
-const HERO_VIDEO = '/bg.mp4';
+const HERO_VIDEO = '/media/snv-automobile-bg.webm';
 
 export default function HeroStatic({ content }) {
   const rawPhone = content?.phone || '07958 319821';
@@ -24,7 +24,7 @@ export default function HeroStatic({ content }) {
               poster={img('slide3.jpg')}
               aria-hidden
             >
-              <source src={HERO_VIDEO} type="video/mp4" />
+              <source src={HERO_VIDEO} type="video/webm" />
             </video>
           </div>
           <div className="slide-content center">
