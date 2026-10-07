@@ -190,7 +190,7 @@ export default function TemplateHeader({ content }) {
                 <div className="address">
                   {content?.hours?.weekdays || (
                     <>
-                      Monday-Saturday{' '}
+                      Monday-Sunday{' '}
                       <span className="custom-color">8:00AM - 7:00PM</span>
                     </>
                   )}
